@@ -139,3 +139,5 @@ THUMBNAIL_ALIASES = {
         'avatar': {'size': (100, 100), 'crop': True},
     },
 }
+
+#AUTH_USER_MODEL = 'blog.User'
