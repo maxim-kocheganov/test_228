@@ -4,7 +4,14 @@ from django.db import models
 import enum
 from django.conf import settings
 from django.contrib.auth.models import AbstractUser
-from django.contrib.auth.models import AbstractUser
+
+
+class User(AbstractUser):
+    class Meta:         
+        permissions = (
+            ("view_all_post", "View registred content only"),
+            ("edit_post", "Edit own posts and add them")),
+
 """
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password, **extra_fields):

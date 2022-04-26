@@ -35,5 +35,6 @@ def post(request):
         content = request.POST["content"]
         p = m.Post()
         p.author = user
-        p.content = 
+        p.content = content
+        p.visiability = m.Post.VISIABILITY
         return HttpResponseRedirect('/home/')
