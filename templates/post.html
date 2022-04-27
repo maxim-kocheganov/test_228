@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<form method="post">  
+    <div class="container">
+      {% csrf_token %}
+      <label for="uname"><b>Title</b></label>
+      <input type="text" placeholder="Username" name="title" required>
+  
+      <label for="psw"><b>Content</b></label>
+      <input type="text" placeholder="Password" name="content" required>
+      
+      <label for="uname"><b>For all</b></label>
+      <input type="checkbox" name="all">
+      <button type="submit">Login</button>
+      <!--
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      -->
+    </div>
+    <!--
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    -->
+    </div>
+</form>
+{% endblock %}

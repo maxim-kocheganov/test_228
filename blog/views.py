@@ -30,11 +30,17 @@ def homePage(request):
         return render(request,"home.html")
 
 def post(request):
+    if request.method == "GET":        
+        return render(request,"post.html")        
     if request.method =="POST":
         user = request.user
         content = request.POST["content"]
         p = m.Post()
         p.author = user
         p.content = content
-        p.visiability = m.Post.VISIABILITY
+        if request.POST["all"] == True:
+            p.visiability = m.Post.REG
+        elif request.POST["all"] == False:
+            p.visiability = m.Post.ALL
+        p.save()
         return HttpResponseRedirect('/home/')
