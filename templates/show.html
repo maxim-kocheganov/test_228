@@ -1,24 +1,21 @@
 {% extends 'base.html'%}
 {% block content %}
 
-{% for o in displayPosts %}
 <div class="mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title">
-    <h3 clas="mdl-card__title-text"> {{o.title}} </h3>
+    <h3 clas="mdl-card__title-text"> {{title}} </h3>
   </div>
   <div class="mdl-card__supporting-text">
-    <span> {{o.content}} </span>
+    <span> {{content}} </span>
   </div> 
   <div class="mdl-card__supporting-text">
-    <h6> Author: {{o.author}}</h6>
+    <h6> Author: {{author}}</h6>
   </div>  
   <div class="mdl-card__supporting-text">
-    <a href="{{o.view}}"> View </a>
-    <a href="{{o.edit}}"> Edit </a>
-    <a href="{{o.delete}}"> Delete </a>
+    <a href="{{edit}}"> Edit</a>    
+    <a href="{{delete}}"> Delete </a>
   </div>
   
 </div>
-{% endfor %}
 
 {% endblock %}

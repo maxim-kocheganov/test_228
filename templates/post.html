@@ -5,14 +5,14 @@
     <div class="container">
       {% csrf_token %}
       <label for="uname"><b>Title</b></label>
-      <input type="text" placeholder="Username" name="title" required>
+      <input type="text" name="title" required>
   
       <label for="psw"><b>Content</b></label>
-      <input type="text" placeholder="Password" name="content" required>
+      <input type="text" name="content" required>
       
       <label for="uname"><b>For all</b></label>
-      <input type="checkbox" name="all">
-      <button type="submit">Login</button>
+      <input type="checkbox" id="for_all" name="for_all">      
+      <button type="submit">Submit</button>
       <!--
       <label>
         <input type="checkbox" checked="checked" name="remember"> Remember me
