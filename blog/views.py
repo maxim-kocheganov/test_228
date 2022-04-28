@@ -55,7 +55,7 @@ def logout(request):
     return HttpResponseRedirect('/home/')
 
 def homePage(request):
-    posts = m.Post.objects.all()
+    posts = m.Post.objects.all().a
     User = get_user_model()
     if request.method =="GET":
         if request.user.is_anonymous:
@@ -70,6 +70,7 @@ def homePage(request):
             p = {'title':post.title,
                  'author':post.author,
                  'content':post.content,
+                 'date':post.created,
                  'view': '/show/' + str(post.id),
                  'edit': '/edit/' + str(post.id),
                  'delete': '/delete/' + str(post.id)
@@ -94,6 +95,7 @@ def show(request,id):
         p = {'title':post.title,
             'author':post.author,
             'content':post.content,
+            'date':post.created,
             'edit':'/edit/' + str(post.id),
             'delete': '/delete/' + str(post.id)}
         return render(request,"show.html",p)
