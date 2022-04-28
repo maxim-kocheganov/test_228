@@ -137,8 +137,8 @@ def edit(request, id):
         return HttpResponseRedirect('/home/')
 
 def post(request):
-    if request.method == "GET":        
-        return render(request,"error.html", {"error":"auth"})        
+    if request.method == "GET":  
+        return render(request,"post.html")           
     if request.method =="POST":
         user = request.user
         User = get_user_model()
