@@ -19,9 +19,16 @@
     integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY="
     crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-   
+    <style>
+        .header 
+        {
+            float: right;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>    
+    <div class="header"> <span>{{user}}</span> <a href="/logout/">logout</a> <a href="/login/">login</a> <a href="/register/">register</a></div>
     {% block content %}
     {% endblock %}
 </body>

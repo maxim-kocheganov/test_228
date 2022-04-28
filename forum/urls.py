@@ -21,10 +21,12 @@ from blog import views as v
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('login/', v.login),
+    path('register/', v.register),
+    path('logout/', v.logout),
     path('home/', v.homePage),
     path('show/<id>', v.show),
     path('edit/<id>', v.edit),
-    path('logout',v.logout),
+    path('delete/<id>', v.delete),
     path("accounts/", include("django.contrib.auth.urls")),
     path('post/', v.post)
 ]

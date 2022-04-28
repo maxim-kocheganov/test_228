@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<form method="post">  
+    <div class="container">
+      {% csrf_token %}
+      <label for="uname"><b>Title</b></label>
+      <input type="text" name="title" required value="{{title}}">
+  
+      <label for="psw"><b>Content</b></label>
+      <input type="text" name="content" required value="{{content}}">
+      
+      <label for="uname"><b>For all</b></label>
+      <input type="checkbox" id="for_all" name="for_all" value="for_all">      
+      <button type="submit">Submit</button>
+    </div>
+</form>
+{% endblock %}

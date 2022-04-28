@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{% block content %}
+
+{% if error == "reg"%}
+<h6> Error with register </h6> 
+{% elif error == "log"%}
+<h6> Error with login </h6> 
+{% endif %}
+{% endblock %}
