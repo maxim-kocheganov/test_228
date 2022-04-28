@@ -25,9 +25,14 @@
             float: right;
             margin-right: 10px;
         }
+        .left
+        {
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>    
+    <div class="left"><a href="/post/"> Create new post</a></div>
     <div class="header"> <span>{{user}}</span> <a href="/logout/">logout</a> <a href="/login/">login</a> <a href="/register/">register</a></div>
     {% block content %}
     {% endblock %}

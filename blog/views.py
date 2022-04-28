@@ -138,7 +138,7 @@ def post(request):
     if request.method =="POST":
         user = request.user
         User = get_user_model()
-        if user.role == User.AUTOR or user.is_staff == True:
+        if user.is_anonymous == False and (user.role == User.AUTOR or user.is_staff == True):
             content = request.POST["content"]
             title = request.POST.get("title", "")
             p = m.Post()
