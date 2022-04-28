@@ -36,7 +36,9 @@ python manage.py createsuperuser
 9) goto projects foldier
 `cd exeldb`
 10) do migrations
-`python3 manage.py makemigrations`
+```python3 manage.py makemigrations
+python manage.py makemigrations blog
+```
 `python3 manage.py migrate`
 11) run test server on localhost
 `python3 manage.py runserver`
@@ -85,6 +87,7 @@ DATABASES = {
 ```
 21) do migrations
 `python3 manage.py makemigrations`
+`python manage.py makemigrations blog`
 `python3 manage.py migrate`
 22) install Apache and it's module
 `sudo apt install apache2 libapache2-mod-wsgi-py3`
