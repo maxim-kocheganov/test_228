@@ -55,7 +55,7 @@ def logout(request):
     return HttpResponseRedirect('/home/')
 
 def homePage(request):
-    posts = m.Post.objects.all().a
+    posts = m.Post.objects.all()
     User = get_user_model()
     if request.method =="GET":
         if request.user.is_anonymous:
