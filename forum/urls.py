@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from blog import views as v
 
-urlpatterns = [
+urlpatterns = [    
     path('admin/', admin.site.urls),
     path('login/', v.login),
     path('register/', v.register),
@@ -28,5 +28,6 @@ urlpatterns = [
     path('edit/<id>', v.edit),
     path('delete/<id>', v.delete),
     path("accounts/", include("django.contrib.auth.urls")),
-    path('post/', v.post)
+    path('post/', v.post),
+    path('', v.redirectHome)
 ]

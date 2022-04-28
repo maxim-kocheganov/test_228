@@ -5,5 +5,8 @@
 <h6> Error with register </h6> 
 {% elif error == "log"%}
 <h6> Error with login </h6> 
+ 
+{% elif error == "auth"%}
+<h6> Not authorized </h6> 
 {% endif %}
 {% endblock %}
