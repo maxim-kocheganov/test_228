@@ -47,7 +47,7 @@ python manage.py makemigrations blog
 Do everuthing as priviously done, exept running test server and using embeded DB (10 and 11 steps)
 
 12) apply updates 
-`sudo apt apdate`, `sudo apt upgrade`
+`sudo apt update`, `sudo apt upgrade`
 13) install Postresql `sudo apt install postgresql`
 14) check it's installation
 ```
